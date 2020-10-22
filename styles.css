@@ -1,0 +1,42 @@
+:root {
+  --lavendar: #ECECED;
+  --lavendar2: #E7E7E8;
+  --gainsboro: #DADADA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* kakao main wrapper */
+.ts-kakao-main {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  /* add `border` and `box-sizing` */
+  border: 1px solid var(--gainsboro);
+  box-sizing: border-box;
+}
+
+/* main sidebar */
+.ts-kakao-main-sidebar {
+  width: 65px;
+  background-color: var(--lavendar);
+  /* add `border-right` and `box-sizing` */
+  border-right: 1px solid var(--lavendar2);
+  box-sizing: border-box;
+}
+
+/* main content */
+.ts-kakao-main-content {
+  flex: 1 1 0;
+}
