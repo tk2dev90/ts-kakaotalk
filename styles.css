@@ -2,6 +2,8 @@
   --lavendar: #ECECED;
   --lavendar2: #E7E7E8;
   --gainsboro: #DADADA;
+  /* add new color */
+  --quartz: #e1e1e3;
 }
 
 * {
@@ -22,7 +24,6 @@ body {
   align-items: stretch;
   width: 100%;
   height: 100%;
-  /* add `border` and `box-sizing` */
   border: 1px solid var(--gainsboro);
   box-sizing: border-box;
 }
@@ -31,12 +32,60 @@ body {
 .ts-kakao-main-sidebar {
   width: 65px;
   background-color: var(--lavendar);
-  /* add `border-right` and `box-sizing` */
   border-right: 1px solid var(--lavendar2);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* add padding to sidebar */
+  padding: 20px 0;
 }
 
 /* main content */
 .ts-kakao-main-content {
   flex: 1 1 0;
+}
+
+/* common styles for link in sidebar */
+.ts-kakao-main-sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* top area link styles */
+.ts-kakao-main-sidebar-top a {
+  width: 100%;
+  height: 56px;
+  opacity: .3;
+}
+
+/* top area link when hover */
+.ts-kakao-main-sidebar-top a:hover {
+  opacity: .6;
+}
+
+/* bottom area link styles */
+.ts-kakao-main-sidebar-bottom a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+/* bottom area link styles */
+.ts-kakao-main-sidebar-bottom a + a {
+  margin-top: 10px;
+}
+
+/* bottom area link when hover */
+.ts-kakao-main-sidebar-bottom a:hover {
+  background-color: var(--quartz);
+}
+
+/* sidebar separated area */
+.ts-kakao-main-sidebar-top, .ts-kakao-main-sidebar-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
